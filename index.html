@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de acceso</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #fce1f0; /* Fondo rosa claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #e91e63; /* Texto rosa fuerte */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e91e63; /* Botón rosa fuerte */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d81b60; /* Botón rosa medio al pasar el mouse */
+        }
+
+        #mensaje-error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVTdaeyagrTm1wEVE_SX38wxtPOu7nlZrpog&s">
+    <img src="https://images.thortful.com/cdn-cgi/image/quality=50,width=160,format=auto/card/61dc43776021c20001fbf534/61dc43776021c20001fbf534_medium.jpg?version=1">
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="button" id="boton-ingresar" onclick="verificarAcceso()">Ingresar</button>
+        <div id="mensaje-error"></div> </form>
+
+    <script>
+        function verificarAcceso() {
+            const nombre = document.getElementById("nombre").value;
+            const password = document.getElementById("password").value;
+            const mensajeError = document.getElementById("mensaje-error");
+
+            if ((nombre === "Farid" || nombre === "Andrea") && password === "160523") {
+                window.location.href = "San Valentin.html";
+            } else {
+                mensajeError.textContent = "Nombre o contraseña incorrectos.";
+            }
+        }
+    </script>
+</body>
+</html>
