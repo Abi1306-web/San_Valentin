@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feliz 14 de febrero</title>
+    <style>
+        body {
+            background-color: #fce1f0;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        h1 {
+            color: #e91e63;
+            font-size: 3em;
+        }
+        #mensaje {
+            font-size: 2em;
+            color: #d81b60;
+        }
+        #pregunta {
+            font-size: 1.5em;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+        #botones {
+            display: flex;
+            justify-content: center; /* Centra los botones horizontalmente */
+            gap: 20px; /* Espacio entre los botones */
+        }
+        #si, #no {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        #si {
+            background-color: #e91e63;
+            color: white;
+        }
+        #si:hover {
+            background-color: #d81b60;
+        }
+        #no {
+            background-color: #ccc; /* Gris claro */
+            color: white;
+        }
+        #no:hover {
+            background-color: #aaa; /* Gris un poco más oscuro */
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz 14 de febrero!</h1>
+    <div id="mensaje"></div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnZrDCPYxxuQ1QGM5mpRw9QQIBCvJTlPAPQA&s">
+
+    <div id="pregunta">¿Deseas pasar el resto de nuestras vidas juntos?</div>
+    <div id="botones">
+    
+        <a href="Respuesta.html"><button id="si">Sí</button></a>
+        <button id="no">No</button> </div>
+
+    <script>
+        const mensajes = [
+            "Te amo demasiado",
+            "Eres la persona más especial en mi vida",
+            "No tengo las palabras para decirte lo mucho que te amo",
+            "Cada día a tu lado es un regalo",
+            "Mi amor por ti crece cada día más",
+            "Prestame 500 varos ;)"
+        ];
+
+        const mensajeElemento = document.getElementById("mensaje");
+        let indiceMensaje = 0;
+
+        setInterval(() => {
+            mensajeElemento.textContent = mensajes[indiceMensaje];
+            indiceMensaje = (indiceMensaje + 1) % mensajes.length;
+        }, 3000);
+    </script>
+</body>
+</html>
